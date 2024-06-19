@@ -4,6 +4,7 @@ from portfolio import Portfolio
 from bank import Bank
         
 class TestMoney(unittest.TestCase):
+    
     def setUp(self):
         self.bank = Bank()
         self.bank.addExchangeRate("EUR", "USD", 1.2)
@@ -67,8 +68,8 @@ class TestMoney(unittest.TestCase):
 
     def testConversionWithMissingExchangeRate(self):
         tenEuros = Money(10, "EUR")
-        with self.assertRaisesRegex(Exception, "EUR->Kalganid"):
-            self.bank.convert(tenEuros, "Kalganid")
+        with self.assertRaisesRegex(Exception, "EUR->GIL"):
+            self.bank.convert(tenEuros, "GIL")
 
 
 if __name__ == '__main__':
