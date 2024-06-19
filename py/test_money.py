@@ -4,7 +4,6 @@ from portfolio import Portfolio
 from bank import Bank
         
 class TestMoney(unittest.TestCase):
-    
     def setUp(self):
         self.bank = Bank()
         self.bank.addExchangeRate("EUR", "USD", 1.2)
