@@ -3,7 +3,7 @@ from money import Money
 from portfolio import Portfolio
 from bank import Bank
         
-class TestMoney(unittest.TestCase):
+class TestMoney(unittest.TestCase): # Test comment
     def setUp(self):
         self.bank = Bank()
         self.bank.addExchangeRate("EUR", "USD", 1.2)
